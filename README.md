@@ -1,21 +1,46 @@
-<<<<<<< HEAD
-# React + Vite
+# 🍛 Minang Food Classifier (React + TailwindCSS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-Frontend-61DAFB?logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-UI%20Framework-06B6D4?logo=tailwindcss)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-MobileNetV3-FF6F00?logo=tensorflow)
+![License](https://img.shields.io/badge/License-MIT-4CAF50)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Deskripsi
 
-## React Compiler
+**Minang Food Classifier** adalah aplikasi berbasis **React + TailwindCSS** yang menggunakan model **MobileNetV3** melalui **FastAPI backend** untuk melakukan klasifikasi gambar makanan khas Minangkabau.  
+Aplikasi ini dapat mengenali **9 jenis makanan tradisional Minangkabau** dengan akurasi tinggi dan tampilan antarmuka yang modern serta responsif.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🍽️ Makanan yang Dikenali
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# RasoMinang-web
-Aplikasi React-based Web Platform untuk mengidentifikasi dan mengklasifikasikan 9 jenis makanan khas Minangkabau menggunakan teknologi AI MobileNetV3 yang terintegrasi dengan FastAPI backend. Platform ini memberikan pengalaman user-friendly dalam mengunggah gambar makanan dan mendapatkan hasil klasifikasi real-time 
->>>>>>> 05c8ef512154a12f65c61f2c3e012f3b704ba2f0
+| No | Kode | Nama Makanan | Deskripsi |
+|----|------|---------------|------------|
+| 1 | ayam_goreng | Ayam Goreng | Ayam goreng khas Minangkabau dengan bumbu rempah yang kaya |
+| 2 | ayam_pop | Ayam Pop | Ayam kukus dengan citarasa gurih dan lembut |
+| 3 | daging_rendang | Daging Rendang | Daging sapi dimasak dengan santan dan rempah hingga kering |
+| 4 | dendeng_batokok | Dendeng Batokok | Daging sapi tipis digepuk dan dibakar dengan bumbu spesial |
+| 5 | gulai_ikan | Gulai Ikan | Ikan segar dalam kuah gulai kuning yang gurih |
+| 6 | gulai_tambusu | Gulai Tambusu | Usus sapi isi tahu dan telur dalam kuah gulai |
+| 7 | gulai_tunjang | Gulai Tunjang | Kikil sapi dimasak dengan kuah gulai pedas |
+| 8 | telur_balado | Telur Balado | Telur rebus dengan sambal balado pedas manis |
+| 9 | telur_dadar | Telur Dadar | Telur dadar padat dengan bumbu khas Minang |
+
+---
+
+## 🚀 Fitur
+
+### ✨ Core Features
+- 🎯 **Klasifikasi Gambar Real-time** – Upload gambar dan dapatkan hasil prediksi secara instan  
+- 📸 **Input Gambar dari File** – Dukungan drag & drop atau file picker  
+- 📊 **Confidence Visualization** – Tampilan grafik probabilitas tiap kelas  
+- 📈 **Result Dashboard** – Tampilkan hasil klasifikasi dengan desain interaktif  
+
+### 🛠️ Technical Features
+- ⚛️ **React Hooks Architecture** – Manajemen state modular dan efisien  
+- 🎨 **TailwindCSS Styling** – Desain minimalis dan responsif  
+- 🌐 **REST API Integration** – Komunikasi dengan backend FastAPI  
+- 🔒 **API Key Authentication** – Akses aman menggunakan token  
