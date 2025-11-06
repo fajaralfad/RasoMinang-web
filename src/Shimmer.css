@@ -1,0 +1,15 @@
+@keyframes shimmer {
+  0% {
+    /* Mengubah background-position untuk efek shimmer */
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+  /* Tambahkan ini jika Anda menggunakan gradient di HTML/JSX dan ingin mengontrol posisi */
+  background-size: 200% 100%; 
+}
