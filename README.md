@@ -11,7 +11,7 @@
 ## 📋 Deskripsi
 
 **Minang Food Classifier** adalah aplikasi berbasis **React + TailwindCSS** yang menggunakan model **MobileNetV3** melalui **FastAPI backend** untuk melakukan klasifikasi gambar makanan khas Minangkabau.  
-Aplikasi ini dapat mengenali **9 jenis makanan tradisional Minangkabau** dengan akurasi tinggi dan tampilan antarmuka yang modern serta responsif.
+Aplikasi ini dapat mengenali **9 jenis makanan tradisional Minangkabau** dengan akurasi tinggi.
 
 ---
 
@@ -32,15 +32,7 @@ Aplikasi ini dapat mengenali **9 jenis makanan tradisional Minangkabau** dengan 
 ---
 
 ## 🚀 Fitur
-
-### ✨ Core Features
 - 🎯 **Klasifikasi Gambar Real-time** – Upload gambar dan dapatkan hasil prediksi secara instan  
 - 📸 **Input Gambar dari File** – Dukungan drag & drop atau file picker  
 - 📊 **Confidence Visualization** – Tampilan grafik probabilitas tiap kelas  
 - 📈 **Result Dashboard** – Tampilkan hasil klasifikasi dengan desain interaktif  
-
-### 🛠️ Technical Features
-- ⚛️ **React Hooks Architecture** – Manajemen state modular dan efisien  
-- 🎨 **TailwindCSS Styling** – Desain minimalis dan responsif  
-- 🌐 **REST API Integration** – Komunikasi dengan backend FastAPI  
-- 🔒 **API Key Authentication** – Akses aman menggunakan token  
