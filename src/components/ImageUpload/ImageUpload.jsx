@@ -1,10 +1,17 @@
-import React, { useCallback, useState, useRef } from 'react';
+import React, { useCallback, useState, useRef, useEffect } from 'react';
 import { VALID_FILE_TYPES, MAX_FILE_SIZE } from '../../utils/constants';
 
-const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
+const ImageUpload = ({ onImageSelect, disabled, className = '', initialImage = null }) => {
   const [dragActive, setDragActive] = useState(false);
   const [previewUrl, setPreviewUrl] = useState(null);
   const fileInputRef = useRef(null);
+
+  useEffect(() => {
+    if (initialImage && initialImage instanceof File) {
+      const preview = URL.createObjectURL(initialImage);
+      setPreviewUrl(preview);
+    }
+  }, [initialImage]);
 
   const handleDrag = useCallback((e) => {
     e.preventDefault();
@@ -31,9 +38,11 @@ const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
   const processFile = (file) => {
     try {
       validateFile(file);
+      
       if (previewUrl) {
         URL.revokeObjectURL(previewUrl);
       }
+      
       const preview = URL.createObjectURL(file);
       setPreviewUrl(preview);
       onImageSelect(file);
@@ -54,7 +63,7 @@ const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
     if (files && files[0]) {
       processFile(files[0]);
     }
-  }, [onImageSelect]);
+  }, [onImageSelect, previewUrl]);
 
   const handleChange = (e) => {
     const files = e.target.files;
@@ -64,7 +73,7 @@ const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
   };
 
   const handleUploadClick = () => {
-    if (fileInputRef.current) {
+    if (fileInputRef.current && !disabled) {
       fileInputRef.current.value = '';
       fileInputRef.current.click();
     }
@@ -80,6 +89,14 @@ const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
       fileInputRef.current.value = '';
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (previewUrl) {
+        URL.revokeObjectURL(previewUrl);
+      }
+    };
+  }, [previewUrl]);
 
   return (
     <div className={`w-full ${className}`}>
@@ -126,9 +143,7 @@ const ImageUpload = ({ onImageSelect, disabled, className = '' }) => {
             <div className="space-y-3">
               <p className="text-xl font-bold text-gray-800">
                 <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-orange-600 group-hover:from-red-500 group-hover:to-orange-500 transition-all duration-300">
-                  Klik untuk upload
-                </span>
-                atau drag & drop
+                  Klik untuk upload atau drag & drop </span>
               </p>
               
               <p className="text-gray-500 text-sm font-medium">
