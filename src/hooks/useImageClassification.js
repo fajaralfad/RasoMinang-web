@@ -20,7 +20,6 @@ export const useImageClassification = () => {
     } catch (err) {
       console.error('Hook error:', err);
       
-      // Format error message based on error type
       let errorMessage = 'Terjadi kesalahan saat mengklasifikasikan gambar';
       
       if (err.status === 0) {

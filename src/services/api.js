@@ -20,11 +20,11 @@ class ApiService {
   setupInterceptors() {
     this.client.interceptors.response.use(
       (response) => {
-        console.log('🎯 RAW API RESPONSE:', response.data);
+        console.log('RAW API RESPONSE:', response.data);
         return response;
       },
       (error) => {
-        console.error('❌ API Error:', error.response?.data);
+        console.error('API Error:', error.response?.data);
         return Promise.reject(this.handleError(error));
       }
     );
@@ -54,14 +54,14 @@ class ApiService {
     const formData = new FormData();
     formData.append('file', imageFile);
 
-    console.log('📤 Uploading image:', imageFile.name);
+    console.log('Uploading image:', imageFile.name);
 
     try {
       const response = await this.client.post('/predict', formData);
-      console.log('✅ Classification successful:', response.data);
+      console.log('Classification successful:', response.data);
       return response.data;
     } catch (error) {
-      console.error('💥 Classification failed:', error);
+      console.error('Classification failed:', error);
       throw error;
     }
   }

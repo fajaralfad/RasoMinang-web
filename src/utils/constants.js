@@ -10,7 +10,6 @@ export const CLASS_NAMES = {
   "8": "telur_dadar"
 };
 
-// Pastikan keys FOOD_DESCRIPTIONS match dengan yang dikembalikan API
 export const FOOD_DESCRIPTIONS = {
   "ayam_goreng": "Ayam goreng khas Minang dengan bumbu rempah yang kaya dan rasa gurih yang khas",
   "ayam_pop": "Ayam rebus khas Minang yang disajikan dengan sambal merah, memiliki tekstur lembut",
